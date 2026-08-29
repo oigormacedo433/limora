@@ -1,0 +1,1050 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap");
+
+:root {
+  --black: #070604;
+  --black-soft: #0c0906;
+
+  --gold: #a67840;
+  --gold-light: #caa36c;
+  --gold-bright: #dfbd88;
+
+  --paper: #ead8b9;
+  --paper-soft: #d7bf97;
+
+  --card-light: #e8d4ab;
+  --card-light-2: #cfa461;
+
+  --card-dark: #28231d;
+  --card-dark-2: #15130f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  min-width: 320px;
+  min-height: 100vh;
+
+  background: #050403;
+
+  color: var(--paper);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* ============================================================
+   FUNDO GERAL
+============================================================ */
+
+.limora-page {
+  position: relative;
+
+  min-height: 100vh;
+
+  overflow-x: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 15%,
+      rgba(113, 69, 23, 0.08),
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      #080705,
+      #070503 70%,
+      #050403
+    );
+}
+
+.page-grain {
+  position: fixed;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.11;
+
+  z-index: 50;
+
+  background-image:
+    radial-gradient(
+      rgba(255,255,255,0.12) 0.45px,
+      transparent 0.6px
+    );
+
+  background-size: 6px 6px;
+
+  mix-blend-mode: soft-light;
+}
+
+.ambient-glow {
+  position: fixed;
+
+  width: 450px;
+  height: 450px;
+
+  border-radius: 50%;
+
+  filter: blur(150px);
+
+  pointer-events: none;
+}
+
+.ambient-left {
+  left: -350px;
+  top: 15%;
+
+  background:
+    rgba(139, 86, 31, 0.08);
+}
+
+.ambient-right {
+  right: -350px;
+  bottom: 5%;
+
+  background:
+    rgba(139, 86, 31, 0.06);
+}
+
+
+/* ============================================================
+   CONTAINER
+============================================================ */
+
+.limora-shell {
+  position: relative;
+
+  width: min(100%, 900px);
+
+  margin: 0 auto;
+
+  background:
+    linear-gradient(
+      180deg,
+      #080705,
+      #070503
+    );
+
+  box-shadow:
+    0 0 90px rgba(0,0,0,0.45);
+}
+
+
+/* ============================================================
+   HERO
+============================================================ */
+
+.hero {
+  position: relative;
+}
+
+.hero-frame {
+  position: relative;
+
+  overflow: hidden;
+
+  background: #070604;
+}
+
+.hero-image {
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+
+  object-fit: cover;
+
+  object-position: center top;
+}
+
+
+/* ============================================================
+   LOGO SOBRE O HERO
+============================================================ */
+
+.hero-brand {
+  position: absolute;
+
+  top: 36px;
+  left: 50%;
+
+  z-index: 4;
+
+  width: 78%;
+
+  transform:
+    translateX(-50%);
+
+  text-align: center;
+}
+
+.hero-brand p {
+  margin:
+    0
+    0
+    9px;
+
+  color:
+    #b88f5b;
+
+  font-size:
+    clamp(
+      14px,
+      3vw,
+      24px
+    );
+
+  font-style: italic;
+
+  letter-spacing:
+    0.035em;
+
+  opacity: 0.9;
+}
+
+.hero-logo {
+  display: block;
+
+  width:
+    min(
+      100%,
+      430px
+    );
+
+  max-height: 120px;
+
+  margin: 0 auto;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(
+      0
+      3px
+      10px
+      rgba(0,0,0,0.6)
+    );
+}
+
+.hero-key-divider {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 11px;
+
+  width: 220px;
+
+  margin:
+    3px
+    auto
+    0;
+
+  color:
+    var(--gold-light);
+}
+
+.hero-key-divider span {
+  flex: 1;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(184,137,73,0.8)
+    );
+}
+
+.hero-key-divider span:last-child {
+  transform: rotate(180deg);
+}
+
+.hero-key-divider i {
+  font-size: 10px;
+  font-style: normal;
+}
+
+
+/* ============================================================
+   SOMBRA DE TRANSIÇÃO
+============================================================ */
+
+.hero-shadow-bottom {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 190px;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent,
+      rgba(7,5,3,0.35) 35%,
+      #070503 100%
+    );
+}
+
+
+/* ============================================================
+   ESCOLHA
+============================================================ */
+
+.path-section {
+  position: relative;
+
+  z-index: 5;
+
+  margin-top: -46px;
+
+  padding:
+    0
+    56px;
+}
+
+.section-heading {
+  text-align: center;
+
+  margin-bottom: 23px;
+}
+
+.section-heading h1 {
+  margin: 0;
+
+  color: #d2ad77;
+
+  font-size:
+    clamp(
+      38px,
+      7vw,
+      55px
+    );
+
+  font-weight: 500;
+
+  line-height: 1.05;
+}
+
+.ornament {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  width: 104px;
+
+  margin:
+    13px
+    auto
+    0;
+
+  color: #9f743f;
+}
+
+.ornament span {
+  flex: 1;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #9f743f
+    );
+}
+
+.ornament span:last-child {
+  transform:
+    rotate(180deg);
+}
+
+.ornament i {
+  font-size: 8px;
+  font-style: normal;
+}
+
+
+/* ============================================================
+   CARDS
+============================================================ */
+
+.cards {
+  display: grid;
+
+  gap: 23px;
+}
+
+.limora-card {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    150px
+    minmax(0, 1fr)
+    45px;
+
+  align-items: center;
+
+  gap: 25px;
+
+  min-height: 182px;
+
+  padding:
+    22px
+    27px
+    22px
+    24px;
+
+  border-radius: 27px;
+}
+
+
+/* ============================================================
+   EBOOK CARD
+============================================================ */
+
+.ebook-card {
+  color: #2b2117;
+
+  border:
+    1px solid
+    rgba(231,206,160,0.9);
+
+  background:
+    radial-gradient(
+      circle at 18% 40%,
+      rgba(255,255,255,0.34),
+      transparent 30%
+    ),
+    linear-gradient(
+      110deg,
+      #eadabd 0%,
+      #dfc69a 45%,
+      #c89a58 100%
+    );
+
+  box-shadow:
+    0 22px 65px rgba(0,0,0,0.38),
+    inset 0 1px rgba(255,255,255,0.38);
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.ebook-card:hover {
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.46);
+}
+
+
+/* ============================================================
+   MEMBERS CARD
+============================================================ */
+
+.members-card {
+  color: #97846a;
+
+  cursor: not-allowed;
+
+  border:
+    1px solid
+    rgba(156,127,85,0.22);
+
+  background:
+    linear-gradient(
+      110deg,
+      #302a22,
+      #1f1b16 56%,
+      #17140f
+    );
+
+  box-shadow:
+    inset
+    0
+    1px
+    rgba(255,255,255,0.025);
+}
+
+
+/* ============================================================
+   ÍCONES
+============================================================ */
+
+.card-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 135px;
+  height: 135px;
+
+  border-radius: 24px;
+}
+
+.ebook-icon {
+  color: #5a3d1f;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,0.3),
+      transparent 70%
+    );
+}
+
+.members-icon {
+  color: #a07a4c;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(157,115,59,0.07),
+      transparent 70%
+    );
+}
+
+
+/* ============================================================
+   TEXTO DOS CARDS
+============================================================ */
+
+.card-text h2 {
+  margin:
+    0
+    0
+    4px;
+
+  font-size:
+    clamp(
+      31px,
+      5vw,
+      46px
+    );
+
+  font-weight: 500;
+
+  line-height: 1;
+}
+
+.card-text p {
+  margin: 0;
+
+  font-size:
+    clamp(
+      17px,
+      3vw,
+      25px
+    );
+
+  line-height: 1.15;
+}
+
+.coming-soon {
+  display: inline-block;
+
+  margin-top: 13px;
+
+  padding:
+    7px
+    12px;
+
+  color:
+    #c29c68;
+
+  border:
+    1px solid
+    rgba(184,135,70,0.45);
+
+  border-radius: 8px;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.12em;
+}
+
+.card-chevron {
+  justify-self: end;
+
+  opacity: 0.85;
+}
+
+.card-chevron.muted {
+  opacity: 0.38;
+}
+
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
+.limora-footer {
+  padding:
+    58px
+    30px
+    42px;
+
+  text-align: center;
+}
+
+.footer-brand {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+
+  color:
+    #a9804c;
+}
+
+.footer-brand span {
+  font-size: 8px;
+}
+
+.footer-brand strong {
+  color:
+    #b98e58;
+
+  font-size:
+    27px;
+
+  font-weight: 500;
+
+  letter-spacing:
+    0.18em;
+}
+
+.limora-footer p {
+  margin:
+    15px
+    0
+    27px;
+
+  color:
+    #937958;
+
+  font-size:
+    20px;
+
+  line-height: 1.45;
+}
+
+.social-links {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 16px;
+
+  margin-bottom: 27px;
+}
+
+.social-button {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 54px;
+  height: 54px;
+
+  color:
+    #b58a53;
+
+  border:
+    1px solid
+    rgba(184,135,70,0.45);
+
+  border-radius: 50%;
+
+  transition:
+    background 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.social-button:hover {
+  color: #e0bc87;
+
+  background:
+    rgba(184,135,70,0.09);
+
+  transform:
+    translateY(-2px);
+}
+
+.limora-footer small {
+  display: block;
+
+  color:
+    #594838;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing: 0.08em;
+}
+
+
+/* ============================================================
+   MOBILE — REFERÊNCIA PRINCIPAL
+============================================================ */
+
+@media (max-width: 640px) {
+
+  .limora-shell {
+    width: min(100%, 430px);
+  }
+
+  .hero-image {
+    height: 535px;
+
+    object-fit: cover;
+
+    object-position:
+      center top;
+  }
+
+  .hero-brand {
+    top: 22px;
+
+    width: 86%;
+  }
+
+  .hero-brand p {
+    margin-bottom: 4px;
+
+    font-size: 14px;
+  }
+
+  .hero-logo {
+    width: 280px;
+
+    max-height: 76px;
+  }
+
+  .hero-key-divider {
+    width: 125px;
+  }
+
+  .hero-shadow-bottom {
+    height: 125px;
+  }
+
+  .path-section {
+    margin-top: -30px;
+
+    padding:
+      0
+      12px;
+  }
+
+  .section-heading {
+    margin-bottom: 19px;
+  }
+
+  .section-heading h1 {
+    font-size: 32px;
+  }
+
+  .ornament {
+    width: 75px;
+
+    margin-top: 9px;
+  }
+
+  .cards {
+    gap: 13px;
+  }
+
+  .limora-card {
+    grid-template-columns:
+      70px
+      minmax(0, 1fr)
+      22px;
+
+    gap: 12px;
+
+    min-height: 105px;
+
+    padding:
+      12px
+      14px
+      12px
+      12px;
+
+    border-radius: 17px;
+  }
+
+  .card-icon {
+    width: 68px;
+    height: 68px;
+
+    border-radius: 15px;
+  }
+
+  .card-icon svg {
+    width: 44px;
+    height: 44px;
+  }
+
+  .card-text h2 {
+    margin-bottom: 3px;
+
+    font-size: 25px;
+  }
+
+  .card-text p {
+    font-size: 14px;
+  }
+
+  .coming-soon {
+    margin-top: 7px;
+
+    padding:
+      4px
+      8px;
+
+    font-size: 7px;
+
+    border-radius: 6px;
+  }
+
+  .card-chevron {
+    width: 25px;
+  }
+
+  .limora-footer {
+    padding:
+      42px
+      20px
+      28px;
+  }
+
+  .footer-brand {
+    gap: 10px;
+  }
+
+  .footer-brand strong {
+    font-size: 20px;
+  }
+
+  .limora-footer p {
+    margin:
+      11px
+      0
+      20px;
+
+    font-size: 14px;
+  }
+
+  .social-links {
+    gap: 12px;
+
+    margin-bottom: 20px;
+  }
+
+  .social-button {
+    width: 43px;
+    height: 43px;
+  }
+}
+
+
+/* ============================================================
+   DESKTOP
+============================================================ */
+
+@media (min-width: 900px) {
+
+  .limora-shell {
+    width: 900px;
+  }
+
+  .hero-image {
+    max-height: 980px;
+
+    object-fit: cover;
+
+    object-position: center top;
+  }
+}
+
+
+/* ============================================================
+   PÁGINAS SECUNDÁRIAS
+============================================================ */
+
+.sales-page {
+  min-height: 100vh;
+
+  background:
+    #070604;
+
+  color:
+    var(--paper);
+}
+
+.sales-nav {
+  width:
+    min(
+      1100px,
+      calc(100% - 40px)
+    );
+
+  margin: 0 auto;
+
+  padding: 30px 0;
+}
+
+.back-link {
+  color:
+    var(--gold-light);
+
+  font-size: 18px;
+}
+
+.sales-placeholder {
+  width:
+    min(
+      1100px,
+      calc(100% - 40px)
+    );
+
+  margin: 0 auto;
+
+  padding: 70px 0;
+
+  text-align: center;
+}
+
+.sales-kicker {
+  color:
+    var(--gold);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 10px;
+
+  letter-spacing: 0.2em;
+}
+
+.sales-placeholder h1 {
+  font-size:
+    clamp(
+      45px,
+      8vw,
+      90px
+    );
+}
+
+.sales-placeholder p {
+  font-size: 21px;
+}
+
+.sales-area {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 400px;
+
+  border:
+    1px dashed
+    rgba(184,135,70,0.3);
+
+  border-radius: 25px;
+
+  color:
+    rgba(234,216,185,0.35);
+}
+
+
+.card-icon svg {
+  width: 58px;
+  height: 58px;
+}
+
+.card-chevron {
+  width: 34px;
+  height: 34px;
+}
+
+.card-chevron svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.social-button svg {
+  width: 21px;
+  height: 21px;
+}
+
+@media (max-width: 640px) {
+
+  .card-icon svg {
+    width: 43px;
+    height: 43px;
+  }
+
+  .card-chevron {
+    width: 25px;
+    height: 25px;
+  }
+
+  .social-button svg {
+    width: 19px;
+    height: 19px;
+  }
+}
+
