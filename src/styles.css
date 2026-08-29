@@ -1048,3 +1048,1863 @@ a {
   }
 }
 
+
+/* ============================================================
+   ARTES DOS CARDS LIMORA
+============================================================ */
+
+.card-icon {
+  background: transparent !important;
+  overflow: visible;
+}
+
+.card-art {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.card-art-ebook {
+  transform: scale(1.12) rotate(-2deg);
+
+  filter:
+    drop-shadow(0 8px 9px rgba(64, 36, 12, 0.25));
+}
+
+.card-art-members {
+  transform: scale(1.02);
+
+  opacity: 0.72;
+
+  filter:
+    sepia(0.15)
+    brightness(0.74)
+    saturate(0.72)
+    drop-shadow(0 7px 8px rgba(0, 0, 0, 0.42));
+}
+
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+
+  .card-icon {
+    width: 78px;
+    height: 78px;
+  }
+
+  .card-art-ebook {
+    transform: scale(1.15) rotate(-2deg);
+  }
+
+  .card-art-members {
+    transform: scale(1.05);
+  }
+
+  .limora-card {
+    grid-template-columns:
+      78px
+      minmax(0, 1fr)
+      22px;
+  }
+}
+
+
+/* ============================================================
+   LIMORA — PÁGINA DE VENDAS DOS E-BOOKS
+============================================================ */
+
+.sales-ebooks {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+
+  color: #c8aa7c;
+
+  background:
+    radial-gradient(
+      circle at 50% 4%,
+      rgba(121, 72, 27, 0.12),
+      transparent 26%
+    ),
+    linear-gradient(
+      180deg,
+      #080604 0%,
+      #0a0704 42%,
+      #070503 100%
+    );
+}
+
+.sales-grain {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+
+  opacity: 0.07;
+
+  background-image:
+    radial-gradient(
+      rgba(255,255,255,0.17) 0.45px,
+      transparent 0.7px
+    );
+
+  background-size: 5px 5px;
+}
+
+
+/* ============================================================
+   TOPBAR
+============================================================ */
+
+.sales-topbar {
+  position: relative;
+  z-index: 10;
+
+  width: min(1150px, calc(100% - 44px));
+  height: 76px;
+
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+
+  border-bottom:
+    1px solid rgba(164, 116, 57, 0.18);
+}
+
+.sales-back {
+  color: #9d7647;
+
+  font-size: 14px;
+}
+
+.sales-logo {
+  display: block;
+
+  width: 150px;
+  height: 55px;
+
+  object-fit: contain;
+}
+
+.sales-topbar-space {
+  width: 100%;
+}
+
+
+/* ============================================================
+   HERO
+============================================================ */
+
+.sales-hero {
+  position: relative;
+
+  width: min(1150px, calc(100% - 44px));
+
+  min-height: 610px;
+
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 0.93fr 1.07fr;
+
+  align-items: center;
+
+  border-bottom:
+    1px solid rgba(164, 116, 57, 0.18);
+}
+
+.sales-hero-copy {
+  position: relative;
+  z-index: 5;
+
+  padding:
+    70px
+    20px
+    70px
+    10px;
+}
+
+.sales-eyebrow {
+  color: #b2844c;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.3em;
+}
+
+.sales-mini-ornament {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  width: 72px;
+
+  margin:
+    12px 0
+    18px;
+
+  color: #976b38;
+}
+
+.sales-mini-ornament span {
+  flex: 1;
+  height: 1px;
+
+  background:
+    #976b38;
+}
+
+.sales-mini-ornament i {
+  font-style: normal;
+  font-size: 6px;
+}
+
+.sales-hero h1 {
+  max-width: 590px;
+
+  margin:
+    0
+    0
+    27px;
+
+  color: #d7ad72;
+
+  font-size:
+    clamp(
+      43px,
+      5vw,
+      70px
+    );
+
+  font-weight: 500;
+
+  line-height: 0.98;
+
+  text-wrap: balance;
+}
+
+.sales-hero-copy > p {
+  max-width: 530px;
+
+  margin:
+    0
+    0
+    30px;
+
+  color: #a18a6b;
+
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.sales-hero-copy p strong {
+  color: #c4a273;
+  font-weight: 500;
+}
+
+
+/* ============================================================
+   CTA HERO
+============================================================ */
+
+.sales-primary-cta {
+  display: inline-grid;
+
+  grid-template-columns:
+    24px
+    1fr
+    22px;
+
+  align-items: center;
+
+  gap: 13px;
+
+  min-width: 285px;
+
+  padding:
+    15px
+    18px;
+
+  color: #291b0f;
+
+  border:
+    1px solid rgba(255, 225, 181, 0.7);
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      105deg,
+      #ead8b8,
+      #d9b273 58%,
+      #c9944d
+    );
+
+  box-shadow:
+    0
+    17px
+    45px
+    rgba(0,0,0,0.34);
+
+  font-size: 19px;
+
+  transition:
+    transform 180ms ease,
+    filter 180ms ease;
+}
+
+.sales-primary-cta:hover {
+  transform:
+    translateY(-2px);
+
+  filter:
+    brightness(1.05);
+}
+
+.sales-cta-icon {
+  font-size: 23px;
+}
+
+
+/* ============================================================
+   VISUAL DO GUARDIÃO
+============================================================ */
+
+.sales-hero-visual {
+  position: relative;
+
+  min-height: 610px;
+
+  overflow: hidden;
+}
+
+.sales-guardian-scene {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position:
+    center 31%;
+
+  transform:
+    scale(1.14);
+
+  opacity: 0.82;
+}
+
+.sales-hero-halo {
+  position: absolute;
+
+  z-index: 2;
+
+  width: 320px;
+  height: 320px;
+
+  top: 22%;
+  left: 16%;
+
+  border-radius: 50%;
+
+  background:
+    rgba(203, 139, 59, 0.15);
+
+  filter: blur(70px);
+}
+
+.sales-visual-fade {
+  position: absolute;
+
+  z-index: 3;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      #080604 0%,
+      rgba(8,6,4,0.78) 8%,
+      rgba(8,6,4,0.1) 45%,
+      rgba(8,6,4,0.06) 75%,
+      rgba(8,6,4,0.6) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(8,6,4,0.35),
+      transparent 30%,
+      transparent 67%,
+      #080604 100%
+    );
+}
+
+
+/* livro mágico flutuando próximo ao Guardião */
+
+.sales-book-float {
+  position: absolute;
+
+  z-index: 5;
+
+  right: 5%;
+  bottom: 5%;
+
+  width: 190px;
+  height: 190px;
+
+  pointer-events: none;
+}
+
+.sales-book-float::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 22%;
+
+  border-radius: 50%;
+
+  background:
+    rgba(218, 149, 59, 0.16);
+
+  filter:
+    blur(27px);
+}
+
+.sales-book-float img {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(
+      0 16px 16px
+      rgba(0,0,0,0.6)
+    );
+}
+
+
+/* ============================================================
+   TRILOGIA
+============================================================ */
+
+.sales-trilogy {
+  width:
+    min(
+      1000px,
+      calc(100% - 44px)
+    );
+
+  margin: auto;
+
+  padding:
+    83px 0
+    96px;
+}
+
+.sales-section-title {
+  text-align: center;
+
+  margin-bottom: 42px;
+}
+
+.sales-section-title > span {
+  color: #a87b45;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 10px;
+
+  letter-spacing: 0.27em;
+}
+
+.sales-section-title h2 {
+  margin:
+    11px 0
+    6px;
+
+  color: #d2a86d;
+
+  font-size:
+    clamp(
+      43px,
+      5vw,
+      65px
+    );
+
+  font-weight: 500;
+}
+
+.sales-title-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  width: 90px;
+
+  margin:
+    4px
+    auto
+    8px;
+
+  color: #8d6335;
+}
+
+.sales-title-ornament span {
+  flex: 1;
+  height: 1px;
+
+  background:
+    #8d6335;
+}
+
+.sales-title-ornament i {
+  font-size: 7px;
+  font-style: normal;
+}
+
+.sales-section-title p {
+  margin: 0;
+
+  color: #937958;
+
+  font-size: 17px;
+}
+
+
+/* ============================================================
+   CARDS DOS LIVROS
+============================================================ */
+
+.sales-books {
+  display: grid;
+
+  gap: 12px;
+}
+
+.sales-book-card {
+  display: grid;
+
+  grid-template-columns:
+    82px
+    145px
+    minmax(0,1fr);
+
+  gap: 28px;
+
+  align-items: center;
+
+  padding:
+    10px
+    28px
+    10px
+    18px;
+
+  min-height: 170px;
+
+  border:
+    1px solid rgba(155, 108, 54, 0.28);
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      100deg,
+      rgba(29,20,12,0.75),
+      rgba(20,14,9,0.87)
+    );
+
+  box-shadow:
+    inset 0 1px rgba(255,255,255,0.015);
+}
+
+.sales-roman {
+  color: #b07a3c;
+
+  text-align: center;
+
+  font-size: 50px;
+}
+
+.sales-cover {
+  position: relative;
+
+  width: 118px;
+  height: 148px;
+
+  margin: auto;
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(165,115,56,0.5);
+
+  border-radius: 3px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #2b1c10,
+      #15100b
+    );
+
+  box-shadow:
+    -6px 10px 15px
+    rgba(0,0,0,0.42),
+    inset 0 0 20px
+    rgba(175,114,47,0.09);
+}
+
+.sales-cover::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 5px;
+
+  border:
+    1px solid rgba(166, 113, 52, 0.27);
+}
+
+.sales-cover-title {
+  position: absolute;
+
+  top: 13px;
+  left: 0;
+  right: 0;
+
+  text-align: center;
+
+  color: #cf9c5a;
+
+  font-size: 16px;
+
+  letter-spacing: 0.05em;
+}
+
+.sales-cover small {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 8px;
+
+  color: #8d6235;
+
+  text-align: center;
+
+  font-size: 8px;
+
+  letter-spacing: 0.17em;
+}
+
+
+/* ============================================================
+   CAPA PORTAS
+============================================================ */
+
+.cover-door {
+  position: absolute;
+
+  width: 47px;
+  height: 72px;
+
+  left: 50%;
+  top: 51%;
+
+  transform:
+    translate(-50%, -50%);
+
+  border:
+    1px solid #a46f35;
+
+  border-radius:
+    22px
+    22px
+    2px
+    2px;
+
+  box-shadow:
+    0 0 10px rgba(192, 124, 48, 0.13);
+}
+
+.cover-door-line {
+  position: absolute;
+
+  top: 15px;
+  bottom: 12px;
+
+  left: 50%;
+
+  width: 1px;
+
+  background:
+    rgba(172, 116, 53, 0.45);
+}
+
+.cover-door-knob {
+  position: absolute;
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  right: 9px;
+  bottom: 26px;
+
+  background: #b87a38;
+
+  box-shadow:
+    0 0 5px #b87a38;
+}
+
+
+/* ============================================================
+   CAPA CHAVES
+============================================================ */
+
+.cover-key {
+  position: absolute;
+
+  left: 50%;
+  top: 53%;
+
+  width: 60px;
+  height: 70px;
+
+  transform:
+    translate(-50%, -50%);
+}
+
+.cover-key-ring {
+  position: absolute;
+
+  width: 28px;
+  height: 28px;
+
+  left: 2px;
+  top: 2px;
+
+  border:
+    2px solid #ad773b;
+
+  border-radius: 50%;
+}
+
+.cover-key-stem {
+  position: absolute;
+
+  width: 3px;
+  height: 48px;
+
+  left: 27px;
+  top: 20px;
+
+  transform:
+    rotate(-23deg);
+
+  transform-origin: top;
+
+  background:
+    #ad773b;
+}
+
+.cover-key-teeth {
+  position: absolute;
+
+  width: 17px;
+  height: 3px;
+
+  right: 6px;
+  bottom: 9px;
+
+  transform:
+    rotate(-23deg);
+
+  background:
+    #ad773b;
+
+  box-shadow:
+    6px 6px 0
+    -1px #ad773b;
+}
+
+
+/* ============================================================
+   CAPA CASA
+============================================================ */
+
+.cover-house {
+  position: absolute;
+
+  width: 65px;
+  height: 67px;
+
+  left: 50%;
+  top: 53%;
+
+  transform:
+    translate(-50%, -50%);
+}
+
+.cover-house-roof {
+  width: 45px;
+  height: 45px;
+
+  margin:
+    3px auto -22px;
+
+  transform:
+    rotate(45deg);
+
+  border-left:
+    1px solid #ad773b;
+
+  border-top:
+    1px solid #ad773b;
+}
+
+.cover-house-body {
+  position: relative;
+
+  width: 52px;
+  height: 39px;
+
+  margin: auto;
+
+  border:
+    1px solid #ad773b;
+}
+
+.cover-house-body span {
+  position: absolute;
+
+  width: 9px;
+  height: 11px;
+
+  top: 11px;
+
+  background:
+    rgba(204, 137, 54, 0.6);
+
+  box-shadow:
+    0 0 7px
+    rgba(204,137,54,0.3);
+}
+
+.cover-house-body span:first-child {
+  left: 9px;
+}
+
+.cover-house-body span:last-child {
+  right: 9px;
+}
+
+
+/* ============================================================
+   TEXTO DOS LIVROS
+============================================================ */
+
+.sales-book-content > span {
+  color: #a47742;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 0.24em;
+}
+
+.sales-book-content h3 {
+  margin:
+    6px 0
+    5px;
+
+  color: #d2a15e;
+
+  font-size: 38px;
+  font-weight: 500;
+}
+
+.sales-book-content h4 {
+  margin:
+    0
+    0
+    11px;
+
+  color: #b68b58;
+
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.sales-book-content p {
+  max-width: 620px;
+
+  margin: 0;
+
+  color: #89745b;
+
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+
+/* ============================================================
+   CTA FINAL
+============================================================ */
+
+.sales-final {
+  width:
+    min(
+      1000px,
+      calc(100% - 44px)
+    );
+
+  margin: auto;
+
+  padding:
+    78px
+    20px
+    88px;
+
+  text-align: center;
+
+  border-top:
+    1px solid rgba(158,109,54,0.18);
+}
+
+.sales-final-symbol {
+  margin-bottom: 14px;
+
+  color: #875f34;
+
+  font-size: 9px;
+}
+
+.sales-final h2 {
+  max-width: 800px;
+
+  margin:
+    0
+    auto
+    13px;
+
+  color: #d0a66d;
+
+  font-size:
+    clamp(
+      38px,
+      5vw,
+      58px
+    );
+
+  font-weight: 500;
+  line-height: 1;
+}
+
+.sales-final > p {
+  margin:
+    0
+    auto
+    27px;
+
+  color: #977c5c;
+
+  font-size: 18px;
+}
+
+.sales-buy-button {
+  display: grid;
+
+  grid-template-columns:
+    28px
+    1fr
+    25px;
+
+  align-items: center;
+
+  gap: 14px;
+
+  width: min(410px, 100%);
+
+  margin: auto;
+
+  padding:
+    16px
+    20px;
+
+  color: #281a0e;
+
+  border:
+    1px solid #d3ad74;
+
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      105deg,
+      #e8d3ac,
+      #d9b170,
+      #c9944e
+    );
+
+  box-shadow:
+    0
+    17px
+    50px
+    rgba(0,0,0,0.31);
+
+  font-size: 19px;
+}
+
+.sales-final small {
+  display: block;
+
+  margin-top: 14px;
+
+  color: #8e7557;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 10px;
+}
+
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
+.sales-footer {
+  padding:
+    25px
+    20px
+    50px;
+
+  text-align: center;
+
+  border-top:
+    1px solid rgba(157,109,54,0.18);
+}
+
+.sales-footer-line {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  width: 100px;
+
+  margin:
+    -29px
+    auto
+    14px;
+
+  color: #8c6235;
+}
+
+.sales-footer-line span {
+  flex: 1;
+  height: 1px;
+
+  background:
+    #604226;
+}
+
+.sales-footer-line i {
+  font-style: normal;
+
+  font-size: 7px;
+
+  padding: 4px;
+
+  background: #070503;
+}
+
+.sales-footer strong {
+  color: #b8864c;
+
+  font-size: 24px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.23em;
+}
+
+.sales-footer p {
+  margin:
+    7px 0
+    13px;
+
+  color: #715b43;
+
+  font-size: 14px;
+}
+
+.sales-footer > a {
+  color: #8f6c45;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 0.06em;
+}
+
+
+/* ============================================================
+   MOBILE — PRINCIPAL
+============================================================ */
+
+@media (max-width: 640px) {
+
+  .sales-topbar {
+    width: calc(100% - 26px);
+
+    height: 62px;
+  }
+
+  .sales-logo {
+    width: 104px;
+    height: 43px;
+  }
+
+  .sales-back {
+    font-size: 11px;
+  }
+
+
+  /* HERO MOBILE */
+
+  .sales-hero {
+    width: 100%;
+
+    min-height: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    border-bottom:
+      1px solid rgba(164,116,57,0.18);
+  }
+
+  .sales-hero-copy {
+    order: 2;
+
+    width: calc(100% - 28px);
+
+    margin: auto;
+
+    padding:
+      29px
+      0
+      58px;
+
+    text-align: center;
+  }
+
+  .sales-eyebrow {
+    font-size: 8px;
+  }
+
+  .sales-mini-ornament {
+    margin:
+      9px
+      auto
+      16px;
+  }
+
+  .sales-hero h1 {
+    margin:
+      0
+      auto
+      19px;
+
+    font-size: 43px;
+
+    line-height: 0.95;
+  }
+
+  .sales-hero-copy > p {
+    margin:
+      0
+      auto
+      24px;
+
+    font-size: 15px;
+
+    line-height: 1.45;
+  }
+
+  .sales-primary-cta {
+    grid-template-columns:
+      22px
+      1fr
+      18px;
+
+    width: 100%;
+
+    min-width: 0;
+
+    font-size: 17px;
+  }
+
+
+  /* Guardião acima da headline no celular */
+
+  .sales-hero-visual {
+    order: 1;
+
+    width: 100%;
+    min-height: 365px;
+
+    margin-top: 0;
+  }
+
+  .sales-guardian-scene {
+    object-position:
+      center 23%;
+
+    transform:
+      scale(1.04);
+
+    opacity: 0.9;
+  }
+
+  .sales-visual-fade {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(8,6,4,0.13),
+        transparent 42%,
+        #080604 100%
+      );
+  }
+
+  .sales-book-float {
+    right: 4%;
+    bottom: 3%;
+
+    width: 115px;
+    height: 115px;
+  }
+
+
+  /* TRILOGIA MOBILE */
+
+  .sales-trilogy {
+    width: calc(100% - 26px);
+
+    padding:
+      61px
+      0
+      70px;
+  }
+
+  .sales-section-title {
+    margin-bottom: 29px;
+  }
+
+  .sales-section-title h2 {
+    font-size: 42px;
+  }
+
+  .sales-section-title p {
+    font-size: 14px;
+  }
+
+
+  /* Cards ficam verticais e bonitos */
+
+  .sales-book-card {
+    grid-template-columns:
+      54px
+      88px
+      1fr;
+
+    gap: 11px;
+
+    min-height: 152px;
+
+    padding:
+      12px
+      12px
+      12px
+      8px;
+
+    border-radius: 9px;
+  }
+
+  .sales-roman {
+    font-size: 31px;
+  }
+
+  .sales-cover {
+    width: 81px;
+    height: 106px;
+  }
+
+  .sales-cover-title {
+    top: 10px;
+
+    font-size: 12px;
+  }
+
+  .sales-cover small {
+    bottom: 6px;
+
+    font-size: 6px;
+  }
+
+  .cover-door {
+    transform:
+      translate(-50%, -50%)
+      scale(0.7);
+  }
+
+  .cover-key {
+    transform:
+      translate(-50%, -50%)
+      scale(0.7);
+  }
+
+  .cover-house {
+    transform:
+      translate(-50%, -50%)
+      scale(0.7);
+  }
+
+  .sales-book-content > span {
+    font-size: 6px;
+  }
+
+  .sales-book-content h3 {
+    margin:
+      3px
+      0;
+
+    font-size: 26px;
+  }
+
+  .sales-book-content h4 {
+    margin-bottom: 6px;
+
+    font-size: 12px;
+
+    line-height: 1.15;
+  }
+
+  .sales-book-content p {
+    font-size: 10px;
+
+    line-height: 1.35;
+  }
+
+
+  /* CTA FINAL */
+
+  .sales-final {
+    width: calc(100% - 26px);
+
+    padding:
+      64px
+      0
+      67px;
+  }
+
+  .sales-final h2 {
+    font-size: 40px;
+  }
+
+  .sales-final > p {
+    font-size: 15px;
+  }
+
+  .sales-buy-button {
+    font-size: 16px;
+  }
+
+  .sales-final small {
+    font-size: 8px;
+  }
+
+}
+
+
+/* ============================================================
+   CELULARES PEQUENOS
+============================================================ */
+
+@media (max-width: 370px) {
+
+  .sales-hero h1 {
+    font-size: 37px;
+  }
+
+  .sales-book-card {
+    grid-template-columns:
+      38px
+      74px
+      1fr;
+
+    gap: 8px;
+  }
+
+  .sales-cover {
+    width: 68px;
+    height: 94px;
+  }
+
+  .sales-roman {
+    font-size: 25px;
+  }
+
+  .sales-book-content h3 {
+    font-size: 23px;
+  }
+
+  .sales-book-content h4 {
+    font-size: 11px;
+  }
+
+  .sales-book-content p {
+    font-size: 9px;
+  }
+
+}
+
+
+/* ============================================================
+   PREÇO NO HERO
+============================================================ */
+
+.sales-hero-price {
+  display: flex;
+  align-items: center;
+
+  width: fit-content;
+
+  margin:
+    -7px
+    0
+    24px;
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(183, 132, 68, 0.32);
+
+  border-radius: 8px;
+
+  background:
+    rgba(21, 14, 8, 0.72);
+
+  box-shadow:
+    inset 0 1px rgba(255,255,255,0.025);
+}
+
+.sales-hero-price span {
+  padding:
+    9px
+    12px;
+
+  color: #9a7244;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing: 0.17em;
+}
+
+.sales-hero-price strong {
+  padding:
+    7px
+    13px;
+
+  color: #e2bc83;
+
+  border-left:
+    1px solid rgba(183,132,68,0.22);
+
+  border-right:
+    1px solid rgba(183,132,68,0.22);
+
+  font-size: 23px;
+
+  font-weight: 500;
+}
+
+.sales-hero-price small {
+  padding:
+    9px
+    12px;
+
+  color: #725b42;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 8px;
+}
+
+
+/* ============================================================
+   BLOCO DA OFERTA
+============================================================ */
+
+.sales-offer {
+  width:
+    min(
+      390px,
+      100%
+    );
+
+  margin:
+    33px
+    auto
+    20px;
+
+  padding:
+    24px
+    25px;
+
+  border:
+    1px solid rgba(176, 124, 61, 0.28);
+
+  border-radius: 14px;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(171, 112, 47, 0.12),
+      transparent 62%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(38, 27, 17, 0.84),
+      rgba(18, 13, 9, 0.9)
+    );
+
+  box-shadow:
+    0 22px 60px rgba(0,0,0,0.25),
+    inset 0 1px rgba(255,255,255,0.025);
+}
+
+.sales-offer-label {
+  color: #9f7442;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.25em;
+}
+
+.sales-offer-price {
+  margin:
+    12px
+    0
+    3px;
+}
+
+.sales-offer-price small {
+  display: block;
+
+  margin-bottom: 1px;
+
+  color: #7f674d;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 9px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.1em;
+}
+
+.sales-offer-price strong {
+  display: block;
+
+  color: #e0b77d;
+
+  font-size: 54px;
+
+  font-weight: 500;
+
+  line-height: 1;
+}
+
+.sales-offer > p {
+  margin:
+    10px
+    0
+    4px;
+
+  color: #a98a63;
+
+  font-size: 16px;
+}
+
+.sales-offer-payment {
+  color: #685440;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 0.06em;
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 640px) {
+
+  .sales-hero-price {
+    margin:
+      -5px
+      auto
+      22px;
+  }
+
+  .sales-hero-price strong {
+    font-size: 20px;
+  }
+
+  .sales-offer {
+    margin-top: 27px;
+
+    padding:
+      21px
+      18px;
+  }
+
+  .sales-offer-price strong {
+    font-size: 49px;
+  }
+
+}
+
+
+/* ============================================================
+   LIMORA — TIPOGRAFIA MAIS LEGÍVEL
+============================================================ */
+
+/* Base da página */
+.sales-ebooks {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+}
+
+
+/* Headline principal */
+.sales-hero h1 {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-weight: 400;
+
+  letter-spacing: -0.025em;
+
+  line-height: 1.07;
+}
+
+
+/* Títulos principais */
+.sales-section-title h2,
+.sales-final h2,
+.sales-book-content h3 {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-weight: 400;
+
+  letter-spacing: -0.018em;
+}
+
+
+/* Textos de leitura */
+.sales-hero-copy > p,
+.sales-section-title p,
+.sales-book-content h4,
+.sales-book-content p,
+.sales-final > p,
+.sales-offer > p {
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  letter-spacing: 0;
+
+  line-height: 1.6;
+}
+
+
+/* Texto do hero */
+.sales-hero-copy > p {
+  font-size: 17px;
+
+  color: #b09a7c;
+}
+
+
+/* Descrição dos livros */
+.sales-book-content h4 {
+  color: #c09b6c;
+
+  font-size: 17px;
+
+  font-weight: 400;
+}
+
+.sales-book-content p {
+  color: #a18d73;
+
+  font-size: 14px;
+}
+
+
+/* Botões e pequenos textos */
+.sales-primary-cta,
+.sales-buy-button,
+.sales-back,
+.sales-eyebrow,
+.sales-section-title > span,
+.sales-book-content > span,
+.sales-offer-label,
+.sales-offer-payment,
+.sales-final small {
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+
+/* ============================================================
+   PREÇO — SOMENTE NO FINAL
+============================================================ */
+
+.sales-offer {
+  margin-top: 35px;
+}
+
+.sales-offer-price strong {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 58px;
+
+  font-weight: 400;
+
+  letter-spacing: -0.03em;
+
+  color: #e2bb82;
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 640px) {
+
+  .sales-hero h1 {
+    font-size: 39px;
+
+    line-height: 1.08;
+  }
+
+  .sales-hero-copy > p {
+    font-size: 15px;
+
+    line-height: 1.58;
+  }
+
+  .sales-section-title h2 {
+    font-size: 39px;
+
+    line-height: 1.08;
+  }
+
+  .sales-book-content h3 {
+    font-size: 25px;
+  }
+
+  .sales-book-content h4 {
+    font-size: 12px;
+
+    line-height: 1.4;
+  }
+
+  .sales-book-content p {
+    font-size: 10px;
+
+    line-height: 1.5;
+  }
+
+  .sales-final h2 {
+    font-size: 37px;
+
+    line-height: 1.08;
+  }
+
+  .sales-offer-price strong {
+    font-size: 50px;
+  }
+
+}
+

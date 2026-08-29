@@ -1,48 +1,9 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 
 import heroLimora from "../assets/hero-limora.webp";
 import logoLimora from "../assets/logo-limora.webp";
-
-
-function BookIcon() {
-  return (
-    <svg
-      viewBox="0 0 64 64"
-      aria-hidden="true"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M12 14c8-3 14-2 20 3v34c-6-5-12-6-20-3V14Z" />
-      <path d="M52 14c-8-3-14-2-20 3v34c6-5 12-6 20-3V14Z" />
-      <path d="M32 17v34" />
-      <path d="M18 22c4-.5 7 .2 10 2" />
-      <path d="M46 22c-4-.5-7 .2-10 2" />
-    </svg>
-  );
-}
-
-
-function LockIcon() {
-  return (
-    <svg
-      viewBox="0 0 64 64"
-      aria-hidden="true"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <rect x="13" y="27" width="38" height="29" rx="7" />
-      <path d="M21 27v-8c0-7 4-12 11-12s11 5 11 12v8" />
-      <circle cx="32" cy="40" r="4" />
-      <path d="M32 44v6" />
-    </svg>
-  );
-}
+import iconEbooks from "../assets/icon-ebooks.webp";
+import iconMembers from "../assets/icon-members.webp";
 
 
 function ChevronIcon() {
@@ -123,15 +84,16 @@ export default function Home() {
 
       <div className="limora-shell">
 
-        {/* HERO */}
         <section className="hero">
-
           <div className="hero-frame">
 
             <img
               src={heroLimora}
               alt="Guardião do Universo Limora"
               className="hero-image"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
             />
 
             <div className="hero-brand">
@@ -144,6 +106,8 @@ export default function Home() {
                 src={logoLimora}
                 alt="LIMORA"
                 className="hero-logo"
+                loading="eager"
+                decoding="async"
               />
 
               <div className="hero-key-divider">
@@ -157,11 +121,9 @@ export default function Home() {
             <div className="hero-shadow-bottom" />
 
           </div>
-
         </section>
 
 
-        {/* ESCOLHA */}
         <section className="path-section">
 
           <div className="section-heading">
@@ -181,14 +143,17 @@ export default function Home() {
 
           <div className="cards">
 
-            {/* E-BOOKS */}
             <Link
               to="/ebooks"
               className="limora-card ebook-card"
             >
 
               <div className="card-icon ebook-icon">
-                <BookIcon />
+                <img
+                  src={iconEbooks}
+                  alt=""
+                  className="card-art card-art-ebook"
+                />
               </div>
 
               <div className="card-text">
@@ -210,14 +175,17 @@ export default function Home() {
             </Link>
 
 
-            {/* ÁREA DE MEMBROS */}
             <div
               className="limora-card members-card"
               aria-disabled="true"
             >
 
               <div className="card-icon members-icon">
-                <LockIcon />
+                <img
+                  src={iconMembers}
+                  alt=""
+                  className="card-art card-art-members"
+                />
               </div>
 
               <div className="card-text">
@@ -247,16 +215,11 @@ export default function Home() {
         </section>
 
 
-        {/* FOOTER */}
         <footer className="limora-footer">
 
           <div className="footer-brand">
             <span>◆</span>
-
-            <strong>
-              LIMORA
-            </strong>
-
+            <strong>LIMORA</strong>
             <span>◆</span>
           </div>
 
@@ -268,27 +231,15 @@ export default function Home() {
 
           <div className="social-links">
 
-            <a
-              href="#"
-              aria-label="Instagram"
-              className="social-button"
-            >
+            <a href="#" aria-label="Instagram" className="social-button">
               <InstagramIcon />
             </a>
 
-            <a
-              href="#"
-              aria-label="YouTube"
-              className="social-button"
-            >
+            <a href="#" aria-label="YouTube" className="social-button">
               <YoutubeIcon />
             </a>
 
-            <a
-              href="#"
-              aria-label="E-mail"
-              className="social-button"
-            >
+            <a href="#" aria-label="E-mail" className="social-button">
               <MailIcon />
             </a>
 
