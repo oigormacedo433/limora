@@ -1,7 +1,7 @@
-﻿import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-import heroLimora from "../assets/hero-limora.png";
-import logoLimora from "../assets/logo-limora.png";
+import heroLimora from "../assets/hero-limora.webp";
+import logoLimora from "../assets/logo-limora.webp";
 
 
 function BookIcon() {
