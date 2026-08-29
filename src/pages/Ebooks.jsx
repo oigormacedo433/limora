@@ -1,7 +1,8 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import heroLimora from "../assets/hero-limora.webp";
-import logoLimora from "../assets/logo-limora.webp";
+import heroLimora from "../assets/hero-limora-fast.webp";
+import logoLimora from "../assets/logo-limora-fast.webp";
 
 function ArrowDown() {
   return <span aria-hidden="true">↓</span>;
@@ -12,6 +13,10 @@ function ArrowRight() {
 }
 
 export default function Ebooks() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <main className="sales-ebooks">
 

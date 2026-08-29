@@ -1,9 +1,9 @@
-﻿import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-import heroLimora from "../assets/hero-limora.webp";
-import logoLimora from "../assets/logo-limora.webp";
-import iconEbooks from "../assets/icon-ebooks.webp";
-import iconMembers from "../assets/icon-members.webp";
+import heroLimora from "../assets/hero-limora-fast.webp";
+import logoLimora from "../assets/logo-limora-fast.webp";
+import iconEbooks from "../assets/icon-ebooks-fast.webp";
+import iconMembers from "../assets/icon-members-fast.webp";
 
 
 function ChevronIcon() {
