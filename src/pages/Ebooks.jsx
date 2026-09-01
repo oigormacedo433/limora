@@ -74,7 +74,7 @@ export default function Ebooks() {
           </p>
 
 
-          <a href="#trilogia" className="sales-primary-cta">
+          <a href="https://pay.cakto.com.br/36u5iq2_1077499" target="_blank" rel="noopener noreferrer" className="sales-primary-cta">
             <span className="sales-cta-icon">⌑</span>
             Conhecer a coleção
             <ArrowDown />
@@ -315,7 +315,7 @@ export default function Ebooks() {
 
           <div className="sales-offer-price">
             <small>por apenas</small>
-            <strong>R$ 19,90</strong>
+            <strong>R$ 29,90</strong>
           </div>
 
           <p>
@@ -329,7 +329,7 @@ export default function Ebooks() {
         </div>
 
         <a
-          href="https://pay.kiwify.com.br/Px8ro8T"
+          href="https://pay.cakto.com.br/36u5iq2_1077499"
           target="_blank"
           rel="noopener noreferrer"
           className="sales-buy-button"
@@ -340,7 +340,7 @@ export default function Ebooks() {
         </a>
 
         <small>
-          🔒 Pagamento 100% seguro via Kiwify
+          🔒 Pagamento 100% seguro via Cakto
         </small>
 
       </section>
