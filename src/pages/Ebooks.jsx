@@ -315,7 +315,7 @@ export default function Ebooks() {
 
           <div className="sales-offer-price">
             <small>por apenas</small>
-            <strong>R$ 29,90</strong>
+            <strong>R$ 19,90</strong>
           </div>
 
           <p>
